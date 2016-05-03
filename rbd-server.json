@@ -9,7 +9,7 @@
         "containers": [
             {
                 "name": "rbd-server",
-                "image": "jhou/rbd",
+                "image": "aosqe/rbd",
                 "ports": [{
                     "containerPort": 6789,
                     "hostPort": 6789
