@@ -9,7 +9,7 @@ The rbd server pod needs `rbd` module and needs to run as `privileged` with `hos
 ```
 # Edit scc.yml, replace YOUR_USERNAME with your username
 oc create -f scc.yml
-oc create -f rbd-server.yml
+oc create -f rbd-server.json
 oc create -f rbd-secret.yml
 ```
 
