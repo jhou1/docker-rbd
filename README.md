@@ -1,7 +1,7 @@
 Ceph RBD server pod for OpenShift testing.
 
 # Making Ceph RBD server image
-Copied from https://github.com/kubernetes/kubernetes/tree/master/test/images/volumes-tester/rbd. In `bootstrap.sh` added an additional command to map the block named **foo**.
+Copied from https://github.com/kubernetes/kubernetes/tree/master/test/images/volumes-tester/rbd.
 
 # Creating Ceph RBD server pod
 The rbd server pod needs `rbd` module and needs to run as `privileged` with `hostNetwork`. Follow these steps to create an RBD server pod on OpenShift 3.
