@@ -2,10 +2,16 @@
     "apiVersion": "v1",
     "kind": "Pod",
     "metadata": {
-        "name": "rbd-server"
+        "name": "rbd-server",
+        "labels": {
+            "storage": "rbd-server"
+        }
     },
     "spec": {
         "hostNetwork": true,
+        "selector": {
+            "role": "rbd-server"
+        },
         "containers": [
             {
                 "name": "rbd-server",
@@ -25,6 +31,10 @@
                     {
                         "mountPath": "/sys",
                         "name": "sys"
+                    },
+                    {
+                        "mountPath": "/dev",
+                        "name": "dev"
                     }
                 ],
                 "imagePullPolicy": "IfNotPresent"
@@ -41,6 +51,12 @@
                  "name": "sys",
                  "hostPath": {
                      "path": "/sys"
+                 }
+            },
+            {
+                 "name": "dev",
+                 "hostPath": {
+                     "path": "/dev"
                  }
             }
         ]
