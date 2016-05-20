@@ -10,7 +10,7 @@
     },
     "accessModes": [ "ReadWriteOnce" ],
     "rbd": {
-        "monitors": ["172.30.67.105:6789"],
+        "monitors": ["#POD_IP#:6789"],
         "pool": "rbd",
         "image": "foo",
         "user": "admin",
