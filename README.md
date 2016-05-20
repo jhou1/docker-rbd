@@ -16,7 +16,7 @@ oc create -f rbd-secret.yml
 
 ## Verifying your rbd server is functional
 
-Run `oc exec rbd-server -- ceph health`, when you see **HEALTH_OK**, your rbd server pod is ready. If you haven't seen it, wait a short time before it is successfully deployed.
+Run `oc exec rbd-server -- ceph health`, when you see **HEALTH_OK**, your rbd server pod is ready. If you haven't seen it, wait a short time until it is successfully deployed.
 
 # Creating Persistent Volume and Claim
 Run `oc get pod rbd-server -o yaml | grep podIP`, the ip of the pod is then used for you to access the rbd server.
