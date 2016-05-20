@@ -11,7 +11,6 @@ The rbd server pod needs to load `rbd` kernel module and needs to run as `privil
 oc create -f scc.yml
 oc create -f rbd-server.json
 oc create -f rbd-secret.yml
-oc create -f service.json
 ```
 
 ## Verify your rbd server is functional
@@ -19,12 +18,12 @@ oc create -f service.json
 Run `oc exec rbd-server -- ceph health`, when you see `HEALTH_OK`, your rbd server pod is ready. If you haven't seen it, wait a short time before it is successfully deployed.
 
 # Creating Persistent Volume and Claim
-You have created the service for rbd server pod, run `oc get service rbd`, the ip of the service is then used for you to access the rbd server.
+You have created the service for rbd server pod, run `oc get pod rbd-server`, the ip of the pod is then used for you to access the rbd server.
 
-Assume your service ip is `172.30.19.30`
+Assume your service ip is `10.1.0.1`
 
 ```
-sed -i s/#SERVICE_IP#/172.30.19.30/ pv-rwo.json
+sed -i s/#SERVICE_IP#/10.1.0.1/ pv-rwo.json
 oc create -f pv-rwo.json
 ```
 
