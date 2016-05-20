@@ -6,8 +6,9 @@ Copied from https://github.com/kubernetes/kubernetes/tree/master/test/images/vol
 # Creating Ceph RBD server pod
 The rbd server pod needs to load `rbd` kernel module and needs to run as `privileged` with `hostNetwork=true`. Follow these steps to create an RBD server pod on OpenShift 3.
 
+Edit `scc.yml`, replace `YOUR_USERNAME` with your login name, then:
+
 ```
-# Edit scc.yml, replace YOUR_USERNAME with your username
 oc create -f scc.yml
 oc create -f rbd-server.json
 oc create -f rbd-secret.yml
