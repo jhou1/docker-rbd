@@ -30,6 +30,7 @@ ADD ./mon.sh /mon.sh
 ADD ./osd.sh /osd.sh
 ADD ./ceph.conf.sh /ceph.conf.sh
 ADD ./keyring /var/lib/ceph/mon/keyring
-ADD ./block.tar.gz /
+#ADD ./block.tar.gz /
+ADD ./rbd.sh /rbd.sh
 
 CMD /bootstrap.sh
