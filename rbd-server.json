@@ -38,7 +38,7 @@
                     }
                 ],
                 "imagePullPolicy": "IfNotPresent",
-                "livenessProbe": {
+                "readinessProbe": {
                     "exec": {
                         "command": [
                             "ceph",
