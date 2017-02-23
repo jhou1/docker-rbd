@@ -11,7 +11,7 @@ Edit `scc.yml`, replace `YOUR_USERNAME` with your login name, then:
 ```
 oc create -f scc.yml
 oc create -f rbd-server.json
-oc create -f rbd-secret.yml
+oc create -f rbd-secret.yaml
 ```
 
 ## Verifying your rbd server is functional
